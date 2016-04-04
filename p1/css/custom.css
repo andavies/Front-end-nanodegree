@@ -25,9 +25,13 @@ h3 {
 }
 
 h1 {
-	font-weight: 200;
-	font-size: 48px;
+	font-weight: 100;
+	font-size: 58px;
 	font-family: 'Lato', sans-serif;
+}
+
+h3 {
+	font-weight: 400;
 }
 
 p {
@@ -40,7 +44,7 @@ p {
 hr {
 	background-color: #bcbbbb;
 	border: none;
-	height: 2px;
+	height: 3px;
 }
 
 /* zocial */
@@ -91,4 +95,14 @@ a:hover {
 /* column holding profile photo */
 .logo-box {
 	padding: 20px 0 0 10px;
+}
+
+/* name and job title - override bootstrap default padding */
+.name {
+	margin-bottom: 5px;
+}
+
+.title {
+	margin-top: 0;
+	font-size: 22px;
 }
