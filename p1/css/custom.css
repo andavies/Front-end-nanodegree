@@ -1,27 +1,8 @@
-/** {
-	border: 1px solid red !important;
-}*/
-
-body {
-	/*background-color: #23addb;*/
-
-}
-
-canvas {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    width: 80%;
-}
-
-
-h1,
-h4 {
-	/* colour differs from spec as provided colour appears green */
-	color: #7d7d63;
+h1 {
+	font-weight: 100;
+	font-size: 58px;
 	font-family: 'Lato', sans-serif;
+	margin-bottom: 5px
 }
 
 h2 {
@@ -31,15 +12,17 @@ h2 {
 	font-weight: 400;
 }
 
-h1 {
-	font-weight: 100;
-	font-size: 58px;
-	font-family: 'Lato', sans-serif;
-}
-
 h3 {
 	font-weight: 400;
 	font-family: 'Lato', sans-serif;
+}
+
+h4 {
+	/* colour differs from spec as provided colour appears green */
+	color: #7d7d63;
+	font-family: 'Lato', sans-serif;
+	margin-top: 0;
+	font-size: 22px;
 }
 
 p {
@@ -55,49 +38,28 @@ hr {
 	height: 3px;
 }
 
+a {
+	color: #bcbbbb;
+}
+
 /* zocial */
 [class*="zocial-"]:before {
   font-family: 'zocial', sans-serif;
 }
 
-a {
-	color: #bcbbbb;
-	text-decoration: underline thin;
-
-}
-/* TODO make these cleaner? Quick fix for now */
+/* TODO make these cleaner */
 .social {
-
 	margin: 25px 75px 25px 75px;
 	text-decoration: none !important;
-
 }
+
+/* disable text-decoration */
 a:visited {
 	color: #bcbbbb;
 }
+
 a:hover {
 	color: #bcbbbb;
-}
-
-.custom-h-p {
-	font-size: 16px;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-}
-
-#map {
-	height: 100%;
-	width: 100%;
-}
-
-.map_holder {
-	height: 600px;
-
-}
-
-#infowindow>p {
-	color: black;
-	font-size: 14px;
 }
 
 /* column holding profile photo */
@@ -105,12 +67,4 @@ a:hover {
 	padding: 20px 0 0 10px;
 }
 
-/* name and job title - override bootstrap default padding */
-.name {
-	margin-bottom: 5px;
-}
 
-.title {
-	margin-top: 0;
-	font-size: 22px;
-}
