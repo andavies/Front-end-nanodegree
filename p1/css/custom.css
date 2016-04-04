@@ -18,10 +18,17 @@ canvas {
 
 
 h1,
-h2,
-h3 {
-	color: #747704;
+h4 {
+	/* colour differs from spec as provided colour appears green */
+	color: #7d7d63;
 	font-family: 'Lato', sans-serif;
+}
+
+h2 {
+	color: #bcbbbb !important;
+	font-size: 42px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
 }
 
 h1 {
@@ -32,11 +39,12 @@ h1 {
 
 h3 {
 	font-weight: 400;
+	font-family: 'Lato', sans-serif;
 }
 
 p {
 	color: #747704;
-	font-size: 24px;
+	font-size: 18px;
 	font-family: 'Lato', sans-serif;
 	text-align: center;
 }
