@@ -13,3 +13,9 @@
   </ul>
 </div>
 
+## TODO
+
+### project 1
+* add modals
+* optimise images with srcset
+
