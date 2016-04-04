@@ -87,3 +87,8 @@ a:hover {
 	color: black;
 	font-size: 14px;
 }
+
+/* column holding profile photo */
+.logo-box {
+	padding: 20px 0 0 10px;
+}
