@@ -109,7 +109,7 @@ bio.display = function() {
 	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
 	var formattedStack = HTMLblog.replace("%data%", bio.contacts.stackexchange);
-	var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.Welcome_message);
+	var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	var formattedBioLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
 	// append details
