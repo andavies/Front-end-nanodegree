@@ -2,9 +2,9 @@
 var bio = {
 	"name" : "Andy Davies",
 	"role" : "Web Developer",
-	"welcomeMessage" : "(welcome message here)",
+	"welcomeMessage" : "welcome message here!",
 	"contacts" : {
-		"mobile" : "mobile number here",
+		"mobile" : "mobile here",
 		"email" : "1andydavies1@gmail.com",
 		"github" : "andavies",
 		"stackOverflow" : "andydavies",
@@ -116,12 +116,13 @@ bio.display = function() {
 	// append details
 	$("#topContacts").append(formattedEmail);
 	$("#topContacts").append(formattedMobile);
-	$("#topContacts").append(formattedBioPic);
 	$("#topContacts").append(formattedTwitter);
 	$("#topContacts").append(formattedGithub);
 	$("#topContacts").append(formattedStack);
-	$("#topContacts").append(formattedWelcomeMsg);
 	$("#topContacts").append(formattedBioLocation);
+	
+	$("#header").append(formattedBioPic);
+	$("#header").append(formattedWelcomeMsg);
 
 
 	// are there any skills in bio?
