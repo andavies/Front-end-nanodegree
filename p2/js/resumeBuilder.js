@@ -103,8 +103,8 @@ bio.display = function() {
 	$("#header").prepend(formattedRole);
 	$("#header").prepend(formattedName);
 
-	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.Email);
-	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.Mobile);
+	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 	var formattedBioPic = HTMLbioPic.replace("%data%", bio.Photo_URL);
 	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
