@@ -11,7 +11,7 @@ var bio = {
 		"twitter" : "1andydavies1",
 		"location" : "Wirral, England"
 	},
-	"skills" : ["skill1", "skill2 etc.."],
+	"skills" : ["HTML", "CSS", "Bootstrap", "Javascript", "jQuery", "PHP"],
 	"img" : "images/profile.jpg"
 };
 
@@ -128,8 +128,12 @@ bio.display = function() {
 	// are there any skills in bio?
 	if (bio.hasOwnProperty("skills")) {
 		$("#header").append(HTMLskillsStart);
-		var formattedSkills = HTMLskills.replace("%data%", bio.skills);
-		$("#skills").append(formattedSkills);
+
+		// loop through bio.skills array
+		for (var skill in bio.skills) {
+			var formattedSkills = HTMLskills.replace("%data%", bio.skills[skill]);
+			$("#skills").append(formattedSkills);
+		}		
 	}
 }
 
