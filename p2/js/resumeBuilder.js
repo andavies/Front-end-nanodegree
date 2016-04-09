@@ -121,6 +121,14 @@ bio.display = function() {
 	$("#topContacts").append(formattedGithub);
 	$("#topContacts").append(formattedStack);
 	$("#topContacts").append(formattedBioLocation);
+
+	// TODO and this!
+	$("#footerContacts").append(formattedEmail);
+	$("#footerContacts").append(formattedMobile);
+	$("#footerContacts").append(formattedTwitter);
+	$("#footerContacts").append(formattedGithub);
+	$("#footerContacts").append(formattedStack);
+	
 	
 	$("#header").append(formattedBioPic);
 	$("#header").append(formattedWelcomeMsg);
