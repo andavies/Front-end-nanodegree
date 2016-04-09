@@ -114,6 +114,7 @@ bio.display = function() {
 	var formattedBioLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
 	// append details
+	// TODO loop through this!
 	$("#topContacts").append(formattedEmail);
 	$("#topContacts").append(formattedMobile);
 	$("#topContacts").append(formattedTwitter);
@@ -200,3 +201,6 @@ bio.display();
 work.display();
 projects.display();
 education.display();
+
+// add google map
+$("#mapDiv").append(googleMap);
