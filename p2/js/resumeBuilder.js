@@ -7,11 +7,12 @@ var bio = {
 		"mobile" : "mobile number here",
 		"email" : "1andydavies1@gmail.com",
 		"github" : "andavies",
-		"stackexchange" : "andydavies",
+		"stackOverflow" : "andydavies",
 		"twitter" : "1andydavies1",
 		"location" : "Wirral, England"
 	},
-	"skills" : ["skill1", "skill2 etc.."]
+	"skills" : ["skill1", "skill2 etc.."],
+	"img" : "images/profile.jpg"
 };
 
 // work object
@@ -105,10 +106,10 @@ bio.display = function() {
 
 	var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
 	var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-	var formattedBioPic = HTMLbioPic.replace("%data%", bio.Photo_URL);
+	var formattedBioPic = HTMLbioPic.replace("%data%", bio.img);
 	var formattedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
 	var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-	var formattedStack = HTMLblog.replace("%data%", bio.contacts.stackexchange);
+	var formattedStack = HTMLstackOverflow.replace("%data%", bio.contacts.stackOverflow);
 	var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 	var formattedBioLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
