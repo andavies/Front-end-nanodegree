@@ -36,3 +36,6 @@
 * makeEnemies function
 * add switch to makeenemies function - cleaner
 
+#### index.html
+* remove old portfolio template
+
