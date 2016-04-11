@@ -2,9 +2,9 @@
 var bio = {
 	"name" : "Andy Davies",
 	"role" : "Web Developer",
-	"welcomeMessage" : "welcome message here!",
+	"welcomeMessage" : "Hi, I'm a front-end web developer looking for an entry-level junior developer role",
 	"contacts" : {
-		"mobile" : "mobile here",
+		"mobile" : "07515462453",
 		"email" : "1andydavies1@gmail.com",
 		"github" : "andavies",
 		"stackOverflow" : "andydavies",
@@ -19,18 +19,18 @@ var bio = {
 var work = {
 	"jobs" : [ // reverse chron order - jobs[0] is most recent
 		{
-			"employer" : "my current employer",
-			"title" : "my current job title",
+			"employer" : "Independent Police Complaints Commission",
+			"title" : "Deputy Senior Investigator",
 			"location" : "Warrington, England",
 			"dates" : "2013 - 2015",
-			"description" : "my job desc"
+			"description" : "Investigated complaints against police officers"
 		},
 		{
-			"employer" : "my old employer",
-			"title" : "my old job titler",
+			"employer" : "Greater Manchester Police",
+			"title" : "Police Officer",
 			"location" : "Manchester, England",
 			"dates" : "2007 - 2013",
-			"description" : "(description here)"
+			"description" : "Police Constable 2007-2012, Sergeant 2012-13"
 		}
 	]
 };
@@ -39,21 +39,21 @@ var work = {
 var projects = {
 	"projects" : [
 		{
-			"title" : "project 1 title here",
-			"dates" : "project dates here",
-			"description" : "desc here",
+			"title" : "myLibrary",
+			"dates" : "December 2015",
+			"description" : "A website that allows people to share their book collection with their local community",
 			"images" : [
-				"image 1",
-				"image 2"
+				"images/mylibrary_1.png",
+				"images/mylibrary_2.png",
+				"images/mylibrary_3.png"
 		    ]
 		},
 		{
-			"title" : "project 2 title here",
-			"dates" : "project dates here",
-			"description" : "desc here",
+			"title" : "Frogger",
+			"dates" : "January 2016",
+			"description" : "A remake of the classic arcade game",
 			"images" : [
-				"image 1",
-				"image 2"
+				"images/frogger_1.png",
 			]
 		}
 	]
@@ -117,7 +117,7 @@ bio.display = function() {
 	// TODO loop through this!
 	$("#topContacts").append(formattedEmail);
 	$("#topContacts").append(formattedMobile);
-	$("#topContacts").append(formattedTwitter);
+	// $("#topContacts").append(formattedTwitter);
 	$("#topContacts").append(formattedGithub);
 	$("#topContacts").append(formattedStack);
 	$("#topContacts").append(formattedBioLocation);
@@ -176,8 +176,10 @@ projects.display = function() {
 		$(".project-entry:last").append(formattedProjectTitle);
 		$(".project-entry:last").append(formattedProjectDates);
 		$(".project-entry:last").append(formattedProjectDesc);
-		for (image in projects.projects.images) {
+		for (image in projects.projects[project].images) {
 			var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+			// test
+			// console.log(formattedProjectImage)
 			$(".project-entry:last").append(formattedProjectImage);
 		}
 	}
