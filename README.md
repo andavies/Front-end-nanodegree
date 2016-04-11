@@ -39,3 +39,9 @@
 #### index.html
 * remove old portfolio template
 
+### project 5
+* Fix map window bounds on search
+* Add event listener for map change (as well as search)
+* Fix place marker showing info window (different logo)
+* Add custom logo?
+* Refactor/tidy code
