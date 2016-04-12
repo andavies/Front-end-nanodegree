@@ -405,8 +405,8 @@ var resizePizzas = function(size) {
 
   // Changes the value for the size of the pizza above the slider
 
-  // Andy: I wondered if a switch is faster than an if/else. It is:
-  // http://stackoverflow.com/questions/2158759/case-vs-if-else-if-which-is-more-efficient
+  /* Andy: I wondered if a switch is faster than an if/else. It is:
+     http://stackoverflow.com/questions/2158759/case-vs-if-else-if-which-is-more-efficient */
 
   function changeSliderLabel(size) {    
     switch(size) {
@@ -460,22 +460,23 @@ var resizePizzas = function(size) {
         iteration, I've moved this outside of the for statement. However doesn't have much
         of an effect on overall speed */
 
-    // var n = document.querySelectorAll(".randomPizzaContainer").length;
+    /* var n = document.querySelectorAll(".randomPizzaContainer").length;
 
-    /* however factoring the whole thing out (not just the length) shaves
-       about 30ms off */
-
-    var n = document.querySelectorAll(".randomPizzaContainer");
-
-    /* for (var i = 0; i < n; i++) {
+    for (var i = 0; i < n; i++) {
       var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
       var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
       document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
     } */
 
-    /* Andy: determineDx(n[i], size) moved outside loop as same for all.
+    /* however factoring the whole thing out (not just the length) shaves
+       about 30ms off */
+
+    var n = document.querySelectorAll(".randomPizzaContainer");    
+
+    /* Andy: determineDx(n[i], size) moved outside loop as same for all pizzas.
        Could select any index of n because they are all the same.
        This optimisation alone took the time to resize pizzas from ~200ms to <5ms */
+
     var dx = determineDx(n[0], size);
     var newwidth = (n[0].offsetWidth + dx) + 'px';
 
