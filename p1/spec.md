@@ -14,7 +14,7 @@ CSS3: Property [some property here] is an unknown vendor extension when using ve
 
 ### Evaluation
 
-![evaluation rubric](http://i.imgur.com/MaI3QL0.png)
+![evaluation rubric](img/spec.png)
 
 ### Style Guidelines
 
