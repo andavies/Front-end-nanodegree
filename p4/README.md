@@ -71,3 +71,34 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 * <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
 * <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
 * <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
+
+## Andy's optimisations
+
+### index.html
+
+* (by far the most effective) remove Google fonts link - very expensive. Reverted to sans-serif.
+
+* unblocked analytics js script with the async attribute
+
+* added `media="print" to print.css link
+
+* 'inlined' style.css
+
+These optimisations improved the PageSpeed Insights score from 77 to 94. 
+
+### main.js
+
+* (main.js:376) instead of calculating css styles in the js file, I added them to the CSS file instead 
+
+* (main.js:459) factored out `document.querySelectorAll(".randomPizzaContainer")`
+
+* (main.js:476) instead of calculating the size of every pizza inside a loop (they are all the same size), 
+  calculate the size just once, and THEN loop through the pizzas
+
+* minified main.js
+
+These optimisation achieved a FPS > 60FPS and resized pizzas < 5ms
+
+### TODO
+
+There are undoubtedly further optimisations that COULD be made, but the required specification has been achieved.
