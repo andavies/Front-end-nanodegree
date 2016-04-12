@@ -373,8 +373,9 @@ var pizzaElementGenerator = function(i) {
   pizzaDescriptionContainer = document.createElement("div");
 
   pizzaContainer.classList.add("randomPizzaContainer");
-  pizzaContainer.style.width = "33.33%";
-  pizzaContainer.style.height = "325px";
+  // Andy: styles removed from here, added to CSS instead to save computation
+  // pizzaContainer.style.width = "33.33%";
+  // pizzaContainer.style.height = "325px";
   pizzaContainer.id = "pizza" + i;                // gives each pizza element a unique id
   pizzaImageContainer.classList.add("col-md-6");
 
@@ -403,7 +404,11 @@ var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API function
 
   // Changes the value for the size of the pizza above the slider
-  function changeSliderLabel(size) {
+
+  // Andy: I wondered if a switch is faster than an if/else. It is:
+  // http://stackoverflow.com/questions/2158759/case-vs-if-else-if-which-is-more-efficient
+
+  function changeSliderLabel(size) {    
     switch(size) {
       case "1":
         document.querySelector("#pizzaSize").innerHTML = "Small";
@@ -450,11 +455,35 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-    for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
+
+    /* Andy: instead of determining whether i < document.querySe... on each
+        iteration, I've moved this outside of the for statement. However doesn't have much
+        of an effect on overall speed */
+
+    // var n = document.querySelectorAll(".randomPizzaContainer").length;
+
+    /* however factoring the whole thing out (not just the length) shaves
+       about 30ms off */
+
+    var n = document.querySelectorAll(".randomPizzaContainer");
+
+    /* for (var i = 0; i < n; i++) {
       var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
       var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
       document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
-    }
+    } */
+
+    /* Andy: determineDx(n[i], size) moved outside loop as same for all.
+       Could select any index of n because they are all the same.
+       This optimisation alone took the time to resize pizzas from ~200ms to <5ms */
+    var dx = determineDx(n[0], size);
+    var newwidth = (n[0].offsetWidth + dx) + 'px';
+
+    for (var i = 0; i < n.length; i++) {
+      // var dx = determineDx(n[i], size);
+      // var newwidth = (n[i].offsetWidth + dx) + 'px';
+      n[i].style.width = newwidth;
+    } 
   }
 
   changePizzaSizes(size);
