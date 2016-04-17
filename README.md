@@ -2,7 +2,7 @@
 
 ![udacity logo](img/udacity.svg)
 
-[udacity.com]](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001)
+[udacity.com](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001)
 
 
 ## Co-Created By:
@@ -10,7 +10,7 @@
 ![att logo](img/att.png)
 ![google logo](img/google.png)
 ![github logo](img/github.png)
-![img/hackreactor.png](hackreactor logo)
+![hackreactor logo](img/hackreactor.png)
 
 This program will teach you the skills required to become a Front-End Web Developer. We’ve designed this curriculum with expert web developers and hiring managers to ensure your portfolio displays the critical indicators of job-readiness. You’ll use HTML and the Bootstrap CSS framework to create your portfolio, and jQuery’s DOM manipulation to dynamically populate your resume. You’ll develop your own arcade game in JavaScript, build complex mapping applications using the Knockout framework, and use the Jasmine testing framework to develop and maintain applications.
 
