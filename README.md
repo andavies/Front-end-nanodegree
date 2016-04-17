@@ -1,6 +1,6 @@
 # Front-End Web Developer Nanodegree
 
-![udacity logo](img/udacity.svg)
+![udacity logo](img/udacity.png)
 
 [udacity.com](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001)
 
